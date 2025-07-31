@@ -1,1 +1,21 @@
 # ML-Example
+
+If you want to test the example run this emulated data:
+
+```
+np.random.seed(42)
+n = 150
+X = pd.DataFrame({
+    'reagent 1': np.random.uniform(50, 150, n),
+    'reagent 2': np.random.uniform(100, 200, n),
+    'reagent 3': np.random.uniform(1, 5, n),
+    'catalyst': np.random.uniform(0.1, 1.0, n)
+})
+
+# 2. Propriedades simuladas
+y = pd.DataFrame({
+    'melt point': 0.02 * X['reagent 1'] + 0.01 * X['reagent 2'] - 0.4 * X['reagent 3'] + 2.5 * X['catalyst'] + np.random.normal(0, 0.2, n),
+    'viscosity': 0.05 * X['reagent 1'] + 0.01 * X['reagent 2'] + 0.5 * X['catalyst'] + np.random.normal(0, 1.4, n),
+    'solubility': 45 - 0.08 * X['reagent 3'] - 0.018 * X['reagent 1'] + np.random.normal(0, 0.3, n)
+})
+```
