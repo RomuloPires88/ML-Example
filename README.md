@@ -2,7 +2,7 @@
 
 <img width="1334" height="409" alt="imagem" src="https://github.com/user-attachments/assets/1ef7a9b1-89bf-4210-91a9-b0e59331d28f" />
 
-If you want to test the example run this emulated data:
+If you want to test the example above, run the following emulated data:
 
 ```
 np.random.seed(42)
